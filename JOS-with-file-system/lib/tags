@@ -1,0 +1,155 @@
+ASM	string.c	9
+BUFLEN	readline.c	4
+FDTABLE	fd.c	8
+FILEDATA	fd.c	11
+INDEX2DATA	fd.c	/^#define INDEX2DATA(i)	((char*) (FILEDATA + (i)*PGS/
+INDEX2FD	fd.c	/^#define INDEX2FD(i)	((struct Fd*) (FDTABLE + ((uin/
+MAXFD	fd.c	6
+PIPEBUFSIZ	pipe.c	20
+PTE_COW	fork.c	8
+Pipe	pipe.c	22
+UTEMP2	spawn.c	5
+UTEMP2USTACK	spawn.c	/^#define UTEMP2USTACK(addr)	((void*) (addr) + (USTA/
+UTEMP3	spawn.c	6
+_panic	panic.c	/^_panic(const char *file, int line, const char *fmt/
+_pipeisclosed	pipe.c	/^_pipeisclosed(struct Fd *fd, struct Pipe *p)$/
+argnext	args.c	/^argnext(struct Argstate *args)$/
+argnextvalue	args.c	/^argnextvalue(struct Argstate *args)$/
+argstart	args.c	/^argstart(int *argc, char **argv, struct Argstate */
+argvalue	args.c	/^argvalue(struct Argstate *args)$/
+binaryname	libmain.c	9
+buf	fprintf.c	13
+buf	printf.c	22
+buf	printfmt.c	272
+buf	readline.c	5
+close	fd.c	/^close(int fdnum)$/
+close_all	fd.c	/^close_all(void)$/
+cnt	printf.c	21
+cnt	printfmt.c	274
+copy_shared_pages	spawn.c	/^copy_shared_pages(envid_t child)$/
+cprintf	printf.c	/^cprintf(const char *fmt, ...)$/
+cputchar	console.c	/^cputchar(int ch)$/
+debug	fd.c	3
+debug	file.c	5
+debug	pipe.c	3
+dev_lookup	fd.c	/^dev_lookup(int dev_id, struct Dev **dev)$/
+devcons	console.c	42
+devcons_close	console.c	/^devcons_close(struct Fd *fd)$/
+devcons_read	console.c	/^devcons_read(struct Fd *fd, void *vbuf, size_t n)$/
+devcons_stat	console.c	/^devcons_stat(struct Fd *fd, struct Stat *stat)$/
+devcons_write	console.c	/^devcons_write(struct Fd *fd, const void *vbuf, siz/
+devfile	file.c	37
+devfile_flush	file.c	/^devfile_flush(struct Fd *fd)$/
+devfile_read	file.c	/^devfile_read(struct Fd *fd, void *buf, size_t n)$/
+devfile_stat	file.c	/^devfile_stat(struct Fd *fd, struct Stat *st)$/
+devfile_trunc	file.c	/^devfile_trunc(struct Fd *fd, off_t newsize)$/
+devfile_write	file.c	/^devfile_write(struct Fd *fd, const void *buf, size/
+devpipe	pipe.c	10
+devpipe_close	pipe.c	/^devpipe_close(struct Fd *fd)$/
+devpipe_read	pipe.c	/^devpipe_read(struct Fd *fd, void *vbuf, size_t n)$/
+devpipe_stat	pipe.c	/^devpipe_stat(struct Fd *fd, struct Stat *stat)$/
+devpipe_write	pipe.c	/^devpipe_write(struct Fd *fd, const void *vbuf, siz/
+devtab	fd.c	126
+dup	fd.c	/^dup(int oldfdnum, int newfdnum)$/
+duppage	fork.c	/^duppage(envid_t envid, unsigned pn)$/
+ebuf	printfmt.c	273
+error	fprintf.c	12
+error_string	printfmt.c	21
+exit	exit.c	/^exit(void)$/
+fd	fprintf.c	9
+fd2data	fd.c	/^fd2data(struct Fd *fd)$/
+fd2num	fd.c	/^fd2num(struct Fd *fd)$/
+fd_alloc	fd.c	/^fd_alloc(struct Fd **fd_store)$/
+fd_close	fd.c	/^fd_close(struct Fd *fd, bool must_exist)$/
+fd_lookup	fd.c	/^fd_lookup(int fdnum, struct Fd **fd_store)$/
+fork	fork.c	/^fork(void)$/
+fprintf	fprintf.c	/^fprintf(int fd, const char *fmt, ...)$/
+fsipc	file.c	/^fsipc(unsigned type, void *dstva)$/
+fsipcbuf	file.c	7
+fstat	fd.c	/^fstat(int fdnum, struct Stat *stat)$/
+ftruncate	fd.c	/^ftruncate(int fdnum, off_t newsize)$/
+getchar	console.c	/^getchar(void)$/
+getint	printfmt.c	/^getint(va_list *ap, int lflag)$/
+getuint	printfmt.c	/^getuint(va_list *ap, int lflag)$/
+idx	fprintf.c	10
+idx	printf.c	20
+init_stack	spawn.c	/^init_stack(envid_t child, const char **argv, uintp/
+ipc_find_env	ipc.c	/^ipc_find_env(enum EnvType type)$/
+ipc_recv	ipc.c	/^ipc_recv(envid_t *from_env_store, void *pg, int *p/
+ipc_send	ipc.c	/^ipc_send(envid_t to_env, uint32_t val, void *pg, i/
+iscons	console.c	/^iscons(int fdnum)$/
+libmain	libmain.c	/^libmain(int argc, char **argv)$/
+map_segment	spawn.c	/^map_segment(envid_t child, uintptr_t va, size_t me/
+memcmp	string.c	/^memcmp(const void *v1, const void *v2, size_t n)$/
+memcpy	string.c	/^memcpy(void *dst, const void *src, size_t n)$/
+memfind	string.c	/^memfind(const void *s, int c, size_t n)$/
+memmove	string.c	/^memmove(void *dst, const void *src, size_t n)$/
+memmove	string.c	/^memmove(void *dst, const void *src, size_t n)$/
+memset	string.c	/^memset(void *v, int c, size_t n)$/
+memset	string.c	/^memset(void *v, int c, size_t n)$/
+open	file.c	/^open(const char *path, int mode)$/
+opencons	console.c	/^opencons(void)$/
+p_buf	pipe.c	25
+p_rpos	pipe.c	23
+p_wpos	pipe.c	24
+pageref	pageref.c	/^pageref(void *v)$/
+pgfault	fork.c	/^pgfault(struct UTrapframe *utf)$/
+pipe	pipe.c	/^pipe(int pfd[2])$/
+pipeisclosed	pipe.c	/^pipeisclosed(int fdnum)$/
+printbuf	fprintf.c	8
+printbuf	printf.c	19
+printf	fprintf.c	/^printf(const char *fmt, ...)$/
+printfmt	printfmt.c	/^printfmt(void (*putch)(int, void*), void *putdat, /
+printnum	printfmt.c	/^printnum(void (*putch)(int, void*), void *putdat,$/
+putch	fprintf.c	/^putch(int ch, void *thunk)$/
+putch	printf.c	/^putch(int ch, struct printbuf *b)$/
+read	fd.c	/^read(int fdnum, void *buf, size_t n)$/
+read_rsp	fork.c	/^read_rsp(void)$/
+readline	readline.c	/^readline(const char *prompt)$/
+readn	fd.c	/^readn(int fdnum, void *buf, size_t n)$/
+remove	file.c	/^remove(const char *path)$/
+result	fprintf.c	11
+seek	fd.c	/^seek(int fdnum, off_t offset)$/
+set_pgfault_handler	pgfault.c	/^set_pgfault_handler(void (*handler)(struct UTrapfr/
+sfork	fork.c	/^sfork(void)$/
+snprintf	printfmt.c	/^snprintf(char *buf, int n, const char *fmt, ...)$/
+spawn	spawn.c	/^spawn(const char *prog, const char **argv)$/
+spawnl	spawn.c	/^spawnl(const char *prog, const char *arg0, ...)$/
+sprintbuf	printfmt.c	271
+sprintputch	printfmt.c	/^sprintputch(int ch, struct sprintbuf *b)$/
+stat	fd.c	/^stat(const char *path, struct Stat *stat)$/
+strcat	string.c	/^strcat(char *dst, const char *src)$/
+strchr	string.c	/^strchr(const char *s, char c)$/
+strcmp	string.c	/^strcmp(const char *p, const char *q)$/
+strcpy	string.c	/^strcpy(char *dst, const char *src)$/
+strfind	string.c	/^strfind(const char *s, char c)$/
+strlcpy	string.c	/^strlcpy(char *dst, const char *src, size_t size)$/
+strlen	string.c	/^strlen(const char *s)$/
+strncmp	string.c	/^strncmp(const char *p, const char *q, size_t n)$/
+strncpy	string.c	/^strncpy(char *dst, const char *src, size_t size) {/
+strnlen	string.c	/^strnlen(const char *s, size_t size)$/
+strstr	string.c	/^char * strstr(const char *in, const char *str)$/
+strtol	string.c	/^strtol(const char *s, char **endptr, int base)$/
+sync	file.c	/^sync(void)$/
+sys_cgetc	syscall.c	/^sys_cgetc(void)$/
+sys_cputs	syscall.c	/^sys_cputs(const char *s, size_t len)$/
+sys_env_destroy	syscall.c	/^sys_env_destroy(envid_t envid)$/
+sys_env_set_pgfault_upcall	syscall.c	/^sys_env_set_pgfault_upcall(envid_t envid, void *up/
+sys_env_set_status	syscall.c	/^sys_env_set_status(envid_t envid, int status)$/
+sys_env_set_trapframe	syscall.c	/^sys_env_set_trapframe(envid_t envid, struct Trapfr/
+sys_getenvid	syscall.c	/^sys_getenvid(void)$/
+sys_ipc_recv	syscall.c	/^sys_ipc_recv(void *dstva)$/
+sys_ipc_try_send	syscall.c	/^sys_ipc_try_send(envid_t envid, uint64_t value, vo/
+sys_page_alloc	syscall.c	/^sys_page_alloc(envid_t envid, void *va, int perm)$/
+sys_page_map	syscall.c	/^sys_page_map(envid_t srcenv, void *srcva, envid_t /
+sys_page_unmap	syscall.c	/^sys_page_unmap(envid_t envid, void *va)$/
+sys_yield	syscall.c	/^sys_yield(void)$/
+syscall	syscall.c	/^syscall(int num, int check, uint64_t a1, uint64_t /
+thisenv	libmain.c	8
+vcprintf	printf.c	/^vcprintf(const char *fmt, va_list ap)$/
+vfprintf	fprintf.c	/^vfprintf(int fd, const char *fmt, va_list ap)$/
+vprintfmt	printfmt.c	/^vprintfmt(void (*putch)(int, void*), void *putdat,/
+vsnprintf	printfmt.c	/^vsnprintf(char *buf, int n, const char *fmt, va_li/
+wait	wait.c	/^wait(envid_t envid)$/
+write	fd.c	/^write(int fdnum, const void *buf, size_t n)$/
+writebuf	fprintf.c	/^writebuf(struct printbuf *b)$/

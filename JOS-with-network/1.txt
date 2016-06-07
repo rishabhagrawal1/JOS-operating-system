@@ -1,0 +1,237 @@
+***
+*** Use Ctrl-a x to exit qemu
+***
+qemu-system-x86_64 -nographic -m 256 -hda obj/kern/kernel.img -serial mon:stdio -gdb tcp::26002 -D qemu.log -smp 1 -hdb obj/fs/fs.img 
+6828 decimal is 15254 octal!
+
+e820 MEMORY MAP
+size: 20, address: 0x0000000000000000, length: 0x000000000009fc00, type: 1
+size: 20, address: 0x000000000009fc00, length: 0x0000000000000400, type: 2
+size: 20, address: 0x00000000000f0000, length: 0x0000000000010000, type: 2
+size: 20, address: 0x0000000000100000, length: 0x000000000fefe000, type: 1
+size: 20, address: 0x000000000fffe000, length: 0x0000000000002000, type: 2
+size: 20, address: 0x00000000fffc0000, length: 0x0000000000040000, type: 2
+
+Physical memory: 256M available, base = 636K, extended = 261120K, npages = 65536
+Pages limited to 3276800 by upage address range (12800MB), Pages limited to 134201344 by remapped phys mem (524224MB)
+Umesh: physical addresses =[8004532010]
+Umesh: physical addresses =[8004532020]
+Umesh: physical addresses =[8004532030]
+Umesh: physical addresses =[8004532040]
+Umesh: physical addresses =[8004532050]
+Umesh: physical addresses =[8004532060]
+Umesh: physical addresses =[8004532080]
+Umesh: physical addresses =[8004532090]
+Umesh: physical addresses =[80045320a0]
+Umesh: physical addresses =[80045320b0]
+Umesh: physical addresses =[80045320c0]
+Umesh: physical addresses =[80045320d0]
+Umesh: physical addresses =[80045320e0]
+Umesh: physical addresses =[80045320f0]
+Umesh: physical addresses =[8004532100]
+Umesh: physical addresses =[8004532110]
+Umesh: physical addresses =[8004532120]
+Umesh: physical addresses =[8004532130]
+Umesh: physical addresses =[8004532140]
+Umesh: physical addresses =[8004532150]
+Umesh: physical addresses =[8004532160]
+Umesh: physical addresses =[8004532170]
+Umesh: physical addresses =[8004532180]
+Umesh: physical addresses =[8004532190]
+Umesh: physical addresses =[80045321a0]
+Umesh: physical addresses =[80045321b0]
+Umesh: physical addresses =[80045321c0]
+Umesh: physical addresses =[80045321d0]
+Umesh: physical addresses =[80045321e0]
+Umesh: physical addresses =[80045321f0]
+Umesh: physical addresses =[8004532200]
+Umesh: physical addresses =[8004532210]
+Umesh: physical addresses =[8004532220]
+Umesh: physical addresses =[8004532230]
+Umesh: physical addresses =[8004532240]
+Umesh: physical addresses =[8004532250]
+Umesh: physical addresses =[8004532260]
+Umesh: physical addresses =[8004532270]
+Umesh: physical addresses =[8004532280]
+Umesh: physical addresses =[8004532290]
+Umesh: physical addresses =[80045322a0]
+Umesh: physical addresses =[80045322b0]
+Umesh: physical addresses =[80045322c0]
+Umesh: physical addresses =[80045322d0]
+Umesh: physical addresses =[80045322e0]
+Umesh: physical addresses =[80045322f0]
+Umesh: physical addresses =[8004532300]
+Umesh: physical addresses =[8004532310]
+Umesh: physical addresses =[8004532320]
+Umesh: physical addresses =[8004532330]
+Umesh: physical addresses =[8004532340]
+Umesh: physical addresses =[8004532350]
+Umesh: physical addresses =[8004532360]
+Umesh: physical addresses =[8004532370]
+Umesh: physical addresses =[8004532380]
+Umesh: physical addresses =[8004532390]
+Umesh: physical addresses =[80045323a0]
+Umesh: physical addresses =[80045323b0]
+Umesh: physical addresses =[80045323c0]
+Umesh: physical addresses =[80045323d0]
+Umesh: physical addresses =[80045323e0]
+Umesh: physical addresses =[80045323f0]
+Umesh: physical addresses =[8004532400]
+Umesh: physical addresses =[8004532410]
+Umesh: physical addresses =[8004532420]
+Umesh: physical addresses =[8004532430]
+Umesh: physical addresses =[8004532440]
+Umesh: physical addresses =[8004532450]
+Umesh: physical addresses =[8004532460]
+Umesh: physical addresses =[8004532470]
+Umesh: physical addresses =[8004532480]
+Umesh: physical addresses =[8004532490]
+Umesh: physical addresses =[80045324a0]
+Umesh: physical addresses =[80045324b0]
+Umesh: physical addresses =[80045324c0]
+Umesh: physical addresses =[80045324d0]
+Umesh: physical addresses =[80045324e0]
+Umesh: physical addresses =[80045324f0]
+Umesh: physical addresses =[8004532500]
+Umesh: physical addresses =[8004532510]
+Umesh: physical addresses =[8004532520]
+Umesh: physical addresses =[8004532530]
+Umesh: physical addresses =[8004532540]
+Umesh: physical addresses =[8004532550]
+Umesh: physical addresses =[8004532560]
+Umesh: physical addresses =[8004532570]
+Umesh: physical addresses =[8004532580]
+Umesh: physical addresses =[8004532590]
+Umesh: physical addresses =[80045325a0]
+Umesh: physical addresses =[80045325b0]
+Umesh: physical addresses =[80045325c0]
+Umesh: physical addresses =[80045325d0]
+Umesh: physical addresses =[80045325e0]
+Umesh: physical addresses =[80045325f0]
+Umesh: physical addresses =[8004532600]
+Umesh: physical addresses =[8004532610]
+Umesh: physical addresses =[8004532620]
+Umesh: physical addresses =[8004532630]
+Umesh: physical addresses =[8004532640]
+Umesh: physical addresses =[8004532650]
+Umesh: physical addresses =[8004532660]
+Umesh: physical addresses =[8004532670]
+Umesh: physical addresses =[8004532680]
+Umesh: physical addresses =[8004532690]
+Umesh: physical addresses =[80045326a0]
+Umesh: physical addresses =[80045326b0]
+Umesh: physical addresses =[80045326c0]
+Umesh: physical addresses =[80045326d0]
+Umesh: physical addresses =[80045326e0]
+Umesh: physical addresses =[80045326f0]
+Umesh: physical addresses =[8004532700]
+Umesh: physical addresses =[8004532710]
+Umesh: physical addresses =[8004532720]
+Umesh: physical addresses =[8004532730]
+Umesh: physical addresses =[8004532740]
+Umesh: physical addresses =[8004532750]
+Umesh: physical addresses =[8004532760]
+Umesh: physical addresses =[8004532770]
+Umesh: physical addresses =[8004532780]
+Umesh: physical addresses =[8004532790]
+Umesh: physical addresses =[80045327a0]
+Umesh: physical addresses =[80045327b0]
+Umesh: physical addresses =[80045327c0]
+Umesh: physical addresses =[80045327d0]
+Umesh: physical addresses =[80045327e0]
+Umesh: physical addresses =[80045327f0]
+Umesh: physical addresses =[8004532800]
+Umesh: physical addresses =[8004532810]
+Umesh: physical addresses =[8004532820]
+Umesh: physical addresses =[8004532830]
+Umesh: physical addresses =[8004532840]
+Umesh: physical addresses =[8004532850]
+Umesh: physical addresses =[8004532860]
+check_boot_pml4e() succeeded!
+Umesh: physical addresses =[8004532870]
+Umesh: physical addresses =[8004532880]
+Umesh: physical addresses =[8004532890]
+page_free address is 8004532870
+page_free address is 8004532880
+page_free address is 8004532890
+Umesh: physical addresses =[8004532890]
+Umesh: physical addresses =[8004532880]
+Umesh: physical addresses =[8004532870]
+page_free address is 8004532890
+Umesh: physical addresses =[8004532890]
+page_free address is 8004532890
+page_free address is 8004532880
+page_free address is 8004532870
+check_page_alloc() succeeded!
+Umesh: physical addresses =[8004532870]
+Umesh: physical addresses =[8004532880]
+Umesh: physical addresses =[8004532890]
+Umesh: physical addresses =[80045328a0]
+Umesh: physical addresses =[80045328b0]
+Umesh: physical addresses =[80045328c0]
+page_free address is 8004532870
+Umesh: physical addresses =[8004532870]
+page_free address is 8004532870
+page_free address is 8004532890
+page_free address is 80045328a0
+Umesh: physical addresses =[80045328a0]
+Umesh: physical addresses =[8004532890]
+Umesh: physical addresses =[8004532870]
+page_free address is 8004532880
+page_free address is 8004532880
+page_free address is 80045328a0
+page_free address is 8004532870
+page_free address is 8004532890
+Umesh: physical addresses =[8004532890]
+Umesh: physical addresses =[8004532870]
+Umesh: physical addresses =[80045328a0]
+page_free address is 8004532870
+page_free address is 8004532890
+Umesh: physical addresses =[8004532890]
+check_page() succeeded!
+SMP: CPU 0 found 1 CPU(s)
+enabled interrupts: 1 2 4
+Umesh: physical addresses =[8004532870]
+Umesh: physical addresses =[80045328d0]
+Umesh: physical addresses =[80045328e0]
+Umesh: physical addresses =[80045328f0]
+Umesh: physical addresses =[8004532900]
+Umesh: physical addresses =[8004532910]
+Umesh: physical addresses =[8004532920]
+Umesh: physical addresses =[8004532930]
+Umesh: physical addresses =[8004532940]
+Umesh: physical addresses =[8004532950]
+Umesh: physical addresses =[8004532960]
+Umesh: physical addresses =[8004532970]
+Umesh: physical addresses =[8004532980]
+Umesh: physical addresses =[8004532990]
+Umesh: physical addresses =[80045329a0]
+Umesh: physical addresses =[80045329b0]
+Umesh: physical addresses =[80045329c0]
+Umesh: physical addresses =[80045329d0]
+Umesh: physical addresses =[80045329e0]
+Umesh: physical addresses =[80045329f0]
+Umesh: physical addresses =[80045387a0]
+Umesh: physical addresses =[80045387b0]
+Umesh: physical addresses =[80045387c0]
+Umesh: physical addresses =[80045387d0]
+Umesh: physical addresses =[80045387e0]
+Umesh: physical addresses =[80045387f0]
+Umesh: physical addresses =[8004538800]
+Umesh: physical addresses =[8004538810]
+FS is running
+FS can do I/O
+Device 1 presence: 1
+Umesh: physical addresses =[8004538820]
+Entry in check_bc
+Umesh: physical addresses =[8004538830]
+Umesh: physical addresses =[8004538840]
+page_free address is 8004538830
+Entry in check_bc memmove done
+Entry in check_bc strcpy done
+page_free address is 8004538830
+kernel panic on CPU 0 at kern/pmap.c:520: pp->pp_link is not NULL
+Welcome to the JOS kernel monitor!
+Type 'help' for a list of commands.
+K> QEMU: Terminated
+

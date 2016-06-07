@@ -1,0 +1,27 @@
+student@vl68:~/cse506/lab6a$ git merge lab5-modified
+Auto-merging user/sh.c
+Auto-merging lib/spawn.c
+Auto-merging lib/printfmt.c
+Auto-merging lib/pfentry.S
+CONFLICT (content): Merge conflict in lib/pfentry.S
+Auto-merging lib/ipc.c
+Auto-merging lib/file.c
+Auto-merging lib/fd.c
+Auto-merging kern/trap.c
+CONFLICT (content): Merge conflict in kern/trap.c
+Auto-merging kern/syscall.c
+CONFLICT (content): Merge conflict in kern/syscall.c
+Auto-merging kern/sched.c
+CONFLICT (content): Merge conflict in kern/sched.c
+Auto-merging kern/pmap.c
+Auto-merging kern/init.c
+CONFLICT (content): Merge conflict in kern/init.c
+Auto-merging kern/env.c
+CONFLICT (content): Merge conflict in kern/env.c
+Auto-merging fs/serv.c
+CONFLICT (content): Merge conflict in fs/serv.c
+Auto-merging fs/fs.c
+Auto-merging fs/bc.c
+CONFLICT (content): Merge conflict in fs/bc.c
+Automatic merge failed; fix conflicts and then commit the result.
+

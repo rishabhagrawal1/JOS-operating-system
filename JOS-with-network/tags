@@ -1,0 +1,297 @@
+$(OBJDIR)/.deps	GNUmakefile	/^$(OBJDIR)\/.deps: $(foreach dir, $(OBJDIRS), $(wild/
+$(OBJDIR)/.vars.%	GNUmakefile	/^$(OBJDIR)\/.vars.%: FORCE$/
+.DELETE_ON_ERROR	GNUmakefile	/^.DELETE_ON_ERROR:$/
+.PHONY	GNUmakefile	/^.PHONY: FORCE$/
+.PHONY	GNUmakefile	/^.PHONY: all always \\$/
+.PRECIOUS	GNUmakefile	/^.PRECIOUS: %.o $(OBJDIR)\/boot\/%.o $(OBJDIR)\/kern\/%/
+.PRECIOUS	GNUmakefile	/^.PRECIOUS: $(OBJDIR)\/.vars.%$/
+.SUFFIXES	GNUmakefile	/^.SUFFIXES:$/
+.gdbinit	GNUmakefile	/^.gdbinit:$(OBJDIR)\/kern\/kernel.asm .gdbinit.tmpl$/
+AR	GNUmakefile	/^AR	:= $(GCCPREFIX)ar$/
+AS	GNUmakefile	/^AS	:= $(GCCPREFIX)as$/
+BOOT_CFLAGS	GNUmakefile	/^BOOT_CFLAGS := $(CFLAGS) -DJOS_KERNEL -gdwarf-2 -m/
+BOOT_LDFLAGS	GNUmakefile	/^BOOT_LDFLAGS := -m elf_i386$/
+CC	GNUmakefile	/^CC	:= $(GCCPREFIX)gcc -pipe$/
+CFLAGS	GNUmakefile	/^CFLAGS := $(CFLAGS) $(DEFS) $(LABDEFS) -O0 -fno-bu/
+CFLAGS +	GNUmakefile	/^CFLAGS += -fno-omit-frame-pointer -mno-red-zone$/
+CFLAGS +	GNUmakefile	/^CFLAGS += -Wall -Wno-format -Wno-unused -Werror -g/
+CFLAGS +	GNUmakefile	/^CFLAGS += $(shell $(CC) -fno-stack-protector -E -x/
+CPUS ?	GNUmakefile	/^CPUS ?= 1$/
+GCCPREFIX	GNUmakefile	/^GCCPREFIX := $(shell if i386-jos-elf-objdump -i 2>/
+GCC_LIB	GNUmakefile	/^GCC_LIB := $(shell $(CC) $(CFLAGS) -print-libgcc-f/
+GDBClient	gradelib.py	/^class GDBClient(object):$/
+GDBPORT	1.txt	24
+GDBPORT	GNUmakefile	/^GDBPORT	:= $(shell expr `id -u` % 5000 + 25000)$/
+GRADEFLAGS +	GNUmakefile	/^GRADEFLAGS += -v$/
+IMAGES	GNUmakefile	/^IMAGES = $(OBJDIR)\/kern\/kernel.img$/
+IMAGES +	GNUmakefile	/^IMAGES += $(OBJDIR)\/fs\/fs.img$/
+KERN_CFLAGS	GNUmakefile	/^KERN_CFLAGS := $(CFLAGS) -DJOS_KERNEL -DDWARF_SUPP/
+KEYFILE	handin-prep	3
+LABSETUP ?	GNUmakefile	/^LABSETUP ?= .\/$/
+LD	GNUmakefile	/^LD	:= $(GCCPREFIX)ld$/
+LDFLAGS	GNUmakefile	/^LDFLAGS := -m elf_x86_64 -z max-page-size=0x1000 -/
+Mex1	ex1.c	/^int main(int argc , char **argv)$/
+NATIVE_CFLAGS	GNUmakefile	/^NATIVE_CFLAGS := $(CFLAGS) $(DEFS) $(LABDEFS) -I$(/
+NCC	GNUmakefile	/^NCC	:= gcc $(CC_VER) -pipe$/
+NM	GNUmakefile	/^NM	:= $(GCCPREFIX)nm$/
+OBJCOPY	GNUmakefile	/^OBJCOPY	:= $(GCCPREFIX)objcopy$/
+OBJDIR	GNUmakefile	/^OBJDIR := obj$/
+OBJDIRS	GNUmakefile	/^OBJDIRS :=$/
+OBJDUMP	GNUmakefile	/^OBJDUMP	:= $(GCCPREFIX)objdump$/
+PERL	GNUmakefile	/^PERL	:= perl$/
+QEMU	GNUmakefile	/^QEMU := $(shell if which qemu-system-x86_64 > \/dev/
+QEMU	gradelib.py	/^class QEMU(object):$/
+QEMUOPTS	GNUmakefile	/^QEMUOPTS = -m 256 -hda $(OBJDIR)\/kern\/kernel.img -/
+QEMUOPTS +	GNUmakefile	/^QEMUOPTS += $(shell if $(QEMU) -nographic -help | /
+QEMUOPTS +	GNUmakefile	/^QEMUOPTS += -smp $(CPUS)$/
+QEMUOPTS +	GNUmakefile	/^QEMUOPTS += -hdb $(OBJDIR)\/fs\/fs.img$/
+QEMUOPTS +	GNUmakefile	/^QEMUOPTS += $(QEMUEXTRA)$/
+Runner	gradelib.py	/^class Runner():$/
+TAR	GNUmakefile	/^TAR	:= gtar$/
+TOP	GNUmakefile	/^TOP = .$/
+TerminateTest	gradelib.py	/^class TerminateTest(Exception):$/
+ULDFLAGS	GNUmakefile	/^ULDFLAGS := -T user\/user.ld$/
+USER_CFLAGS	GNUmakefile	/^USER_CFLAGS := $(CFLAGS) -DJOS_USER -gdwarf-2 -mcm/
+__init__	gradelib.py	/^    def __init__(self, *make_args):$/
+__init__	gradelib.py	/^    def __init__(self, port, timeout=15):$/
+__init__	gradelib.py	/^    def __init__(self, *default_monitors):$/
+__monitor_start	gradelib.py	/^    def __monitor_start(self, output):$/
+__react	gradelib.py	/^    def __react(self, reactors, timeout):$/
+__send	gradelib.py	/^    def __send(self, cmd):$/
+__send_break	gradelib.py	/^    def __send_break(self):$/
+all	GNUmakefile	/^all:$/
+always	GNUmakefile	/^always:$/
+assert_equal	gradelib.py	/^def assert_equal(got, expect, msg=""):$/
+assert_lines_match	gradelib.py	/^def assert_lines_match(text, *regexps, **kw):$/
+assert_lines_match_kw	gradelib.py	/^    def assert_lines_match_kw(no=[]):$/
+available	jos.out	13
+available	jos.out.icode	13
+available	jos.out.primespipe	13
+available	jos.out.pte_share	13
+available	jos.out.testshell	13
+available	jos.out.writemotd1	13
+available	jos.out.writemotd2	13
+base	jos.out	13
+base	jos.out.icode	13
+base	jos.out.primespipe	13
+base	jos.out.pte_share	13
+base	jos.out.testshell	13
+base	jos.out.writemotd1	13
+base	jos.out.writemotd2	13
+breakpoint	gradelib.py	/^    def breakpoint(self, addr):$/
+c27	1.txt	6
+call_on_line	gradelib.py	/^def call_on_line(regexp, callback):$/
+clean	GNUmakefile	/^clean:$/
+close	gradelib.py	/^    def close(self):$/
+color	gradelib.py	/^def color(name, text):$/
+cont	gradelib.py	/^    def cont(self):$/
+deplines	mergedep.pl	34
+distclean	GNUmakefile	/^distclean: realclean$/
+end_part	gradelib.py	/^def end_part(name):$/
+example	CODING	8
+filename	mergedep.pl	28
+fileno	gradelib.py	/^    def fileno(self):$/
+fileno	gradelib.py	/^    def fileno(self):$/
+gdbinit	1.txt	5
+get_current_test	gradelib.py	/^def get_current_test():$/
+get_gdb_port	gradelib.py	/^    def get_gdb_port():$/
+grade	GNUmakefile	/^grade:$/
+handin	challenge1.txt	1
+handin	challenge2.txt	1
+handin	challenge3.txt	1
+handin	challenge4.txt	1
+handin	challenge5.txt	1
+handin	challenge6.txt	1
+handin	GNUmakefile	/^handin: realclean$/
+handin-check	GNUmakefile	/^handin-check:$/
+handin-prep	GNUmakefile	/^handin-prep:$/
+handle_output	gradelib.py	/^        def handle_output(output):$/
+handle_read	gradelib.py	/^    def handle_read(self):$/
+handle_read	gradelib.py	/^    def handle_read(self):$/
+here	challenge2.txt	3
+here	challenge3.txt	3
+here	challenge4.txt	3
+here	challenge5.txt	3
+here	challenge6.txt	3
+kill	gradelib.py	/^    def kill(self):$/
+lab	challenge2.txt	3
+lab	challenge3.txt	3
+lab	challenge4.txt	3
+lab	challenge5.txt	3
+lab	challenge6.txt	3
+main::readdeps	mergedep.pl	/^sub readdeps {$/
+make	gradelib.py	/^def make(*target):$/
+match	gradelib.py	/^    def match(self, *args, **kwargs):$/
+maybe_unlink	gradelib.py	/^def maybe_unlink(*paths):$/
+override V	GNUmakefile	/^override V =$/
+override V	GNUmakefile	/^override V = @$/
+post_make	gradelib.py	/^def post_make():$/
+pre-qemu	GNUmakefile	/^pre-qemu: .gdbinit$/
+pre_make	gradelib.py	/^def pre_make():$/
+prep-%	GNUmakefile	/^prep-%:$/
+print-gdbport	GNUmakefile	/^print-gdbport:$/
+print-qemu	GNUmakefile	/^print-qemu:$/
+printf	CODING	/^  For example, printf("hello") not printf ("hello"/
+pubkey	handin-prep	23
+qemu	GNUmakefile	/^qemu: $(IMAGES) pre-qemu$/
+qemu-gdb	GNUmakefile	/^qemu-gdb: $(IMAGES) pre-qemu$/
+qemu-nox	GNUmakefile	/^qemu-nox: $(IMAGES) pre-qemu$/
+qemu-nox-gdb	GNUmakefile	/^qemu-nox-gdb: $(IMAGES) pre-qemu$/
+r	grade-lab1	6
+r	grade-lab2	5
+r	grade-lab3	5
+r	grade-lab4	6
+r	grade-lab5	5
+realclean	GNUmakefile	/^realclean: clean$/
+register_test	gradelib.py	/^    def register_test(fn, title=title):$/
+reset_fs	gradelib.py	/^def reset_fs():$/
+run-%	GNUmakefile	/^run-%: prep-% pre-qemu$/
+run-%-gdb	GNUmakefile	/^run-%-gdb: prep-% pre-qemu$/
+run-%-nox	GNUmakefile	/^run-%-nox: prep-% pre-qemu$/
+run-%-nox-gdb	GNUmakefile	/^run-%-nox-gdb: prep-% pre-qemu$/
+run_qemu	gradelib.py	/^    def run_qemu(self, *monitors, **kw):$/
+run_qemu_kw	gradelib.py	/^        def run_qemu_kw(target_base="qemu", make_a/
+run_test	gradelib.py	/^        def run_test():$/
+run_tests	gradelib.py	/^def run_tests():$/
+save	gradelib.py	/^def save(path):$/
+save_on_finish	gradelib.py	/^    def save_on_finish(fail):$/
+setup_breakpoint	gradelib.py	/^    def setup_breakpoint(runner):$/
+setup_call_on_line	gradelib.py	/^    def setup_call_on_line(runner):$/
+setup_save	gradelib.py	/^    def setup_save(runner):$/
+show_command	gradelib.py	/^def show_command(cmd):$/
+show_part	gradelib.py	/^    def show_part():$/
+size	jos.out	6
+size	jos.out	7
+size	jos.out	8
+size	jos.out	9
+size	jos.out	10
+size	jos.out	11
+size	jos.out.icode	6
+size	jos.out.icode	7
+size	jos.out.icode	8
+size	jos.out.icode	9
+size	jos.out.icode	10
+size	jos.out.icode	11
+size	jos.out.primespipe	6
+size	jos.out.primespipe	7
+size	jos.out.primespipe	8
+size	jos.out.primespipe	9
+size	jos.out.primespipe	10
+size	jos.out.primespipe	11
+size	jos.out.pte_share	6
+size	jos.out.pte_share	7
+size	jos.out.pte_share	8
+size	jos.out.pte_share	9
+size	jos.out.pte_share	10
+size	jos.out.pte_share	11
+size	jos.out.testshell	6
+size	jos.out.testshell	7
+size	jos.out.testshell	8
+size	jos.out.testshell	9
+size	jos.out.testshell	10
+size	jos.out.testshell	11
+size	jos.out.writemotd1	6
+size	jos.out.writemotd1	7
+size	jos.out.writemotd1	8
+size	jos.out.writemotd1	9
+size	jos.out.writemotd1	10
+size	jos.out.writemotd1	11
+size	jos.out.writemotd2	6
+size	jos.out.writemotd2	7
+size	jos.out.writemotd2	8
+size	jos.out.writemotd2	9
+size	jos.out.writemotd2	10
+size	jos.out.writemotd2	11
+slash	mergedep.pl	35
+stop	gradelib.py	/^    def stop(line):$/
+stop_breakpoint	gradelib.py	/^def stop_breakpoint(addr):$/
+stop_on_line	gradelib.py	/^def stop_on_line(regexp):$/
+tarball	GNUmakefile	/^tarball: handin-check$/
+target	mergedep.pl	33
+test	gradelib.py	/^def test(points, title=None, parent=None):$/
+user_test	gradelib.py	/^    def user_test(self, binary, *monitors, **kw):$/
+wait	gradelib.py	/^    def wait(self):$/
+x0000000000000000	jos.out	6
+x0000000000000000	jos.out.icode	6
+x0000000000000000	jos.out.primespipe	6
+x0000000000000000	jos.out.pte_share	6
+x0000000000000000	jos.out.testshell	6
+x0000000000000000	jos.out.writemotd1	6
+x0000000000000000	jos.out.writemotd2	6
+x0000000000000400	jos.out	7
+x0000000000000400	jos.out.icode	7
+x0000000000000400	jos.out.primespipe	7
+x0000000000000400	jos.out.pte_share	7
+x0000000000000400	jos.out.testshell	7
+x0000000000000400	jos.out.writemotd1	7
+x0000000000000400	jos.out.writemotd2	7
+x0000000000002000	jos.out	10
+x0000000000002000	jos.out.icode	10
+x0000000000002000	jos.out.primespipe	10
+x0000000000002000	jos.out.pte_share	10
+x0000000000002000	jos.out.testshell	10
+x0000000000002000	jos.out.writemotd1	10
+x0000000000002000	jos.out.writemotd2	10
+x0000000000010000	jos.out	8
+x0000000000010000	jos.out.icode	8
+x0000000000010000	jos.out.primespipe	8
+x0000000000010000	jos.out.pte_share	8
+x0000000000010000	jos.out.testshell	8
+x0000000000010000	jos.out.writemotd1	8
+x0000000000010000	jos.out.writemotd2	8
+x0000000000040000	jos.out	11
+x0000000000040000	jos.out.icode	11
+x0000000000040000	jos.out.primespipe	11
+x0000000000040000	jos.out.pte_share	11
+x0000000000040000	jos.out.testshell	11
+x0000000000040000	jos.out.writemotd1	11
+x0000000000040000	jos.out.writemotd2	11
+x000000000009fc00	jos.out	6
+x000000000009fc00	jos.out	7
+x000000000009fc00	jos.out.icode	6
+x000000000009fc00	jos.out.icode	7
+x000000000009fc00	jos.out.primespipe	6
+x000000000009fc00	jos.out.primespipe	7
+x000000000009fc00	jos.out.pte_share	6
+x000000000009fc00	jos.out.pte_share	7
+x000000000009fc00	jos.out.testshell	6
+x000000000009fc00	jos.out.testshell	7
+x000000000009fc00	jos.out.writemotd1	6
+x000000000009fc00	jos.out.writemotd1	7
+x000000000009fc00	jos.out.writemotd2	6
+x000000000009fc00	jos.out.writemotd2	7
+x00000000000f0000	jos.out	8
+x00000000000f0000	jos.out.icode	8
+x00000000000f0000	jos.out.primespipe	8
+x00000000000f0000	jos.out.pte_share	8
+x00000000000f0000	jos.out.testshell	8
+x00000000000f0000	jos.out.writemotd1	8
+x00000000000f0000	jos.out.writemotd2	8
+x0000000000100000	jos.out	9
+x0000000000100000	jos.out.icode	9
+x0000000000100000	jos.out.primespipe	9
+x0000000000100000	jos.out.pte_share	9
+x0000000000100000	jos.out.testshell	9
+x0000000000100000	jos.out.writemotd1	9
+x0000000000100000	jos.out.writemotd2	9
+x000000000fefe000	jos.out	9
+x000000000fefe000	jos.out.icode	9
+x000000000fefe000	jos.out.primespipe	9
+x000000000fefe000	jos.out.pte_share	9
+x000000000fefe000	jos.out.testshell	9
+x000000000fefe000	jos.out.writemotd1	9
+x000000000fefe000	jos.out.writemotd2	9
+x000000000fffe000	jos.out	10
+x000000000fffe000	jos.out.icode	10
+x000000000fffe000	jos.out.primespipe	10
+x000000000fffe000	jos.out.pte_share	10
+x000000000fffe000	jos.out.testshell	10
+x000000000fffe000	jos.out.writemotd1	10
+x000000000fffe000	jos.out.writemotd2	10
+x00000000fffc0000	jos.out	11
+x00000000fffc0000	jos.out.icode	11
+x00000000fffc0000	jos.out.primespipe	11
+x00000000fffc0000	jos.out.pte_share	11
+x00000000fffc0000	jos.out.testshell	11
+x00000000fffc0000	jos.out.writemotd1	11
+x00000000fffc0000	jos.out.writemotd2	11

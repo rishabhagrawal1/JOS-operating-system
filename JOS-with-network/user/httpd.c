@@ -73,12 +73,20 @@ send_header(struct http_request *req, int code)
 	return 0;
 }
 
+#define E1000_TXD_BUFFER_LENGTH 1518
+
 static int
 send_data(struct http_request *req, int fd)
 {
 	// LAB 6: Your code here.
-	
-	return 0;
+	int size = 0;
+	char buf[E1000_TXD_BUFFER_LENGTH];
+	seek(fd, 0);
+	if ((size = readn(fd, buf, sizeof buf)) <= 0)
+		panic("readn: %e", size);
+	if((size = write(req->sock, buf, size)) <= 0)
+		panic("socket write failed: %e", size);
+	return size;
 	panic("send_data not implemented");
 }
 
@@ -226,11 +234,23 @@ send_file(struct http_request *req)
 
 	// LAB 6: Your code here.
 	//panic("send_file not implemented");
-	cprintf("url %s",req->url );
+	cprintf("url %s\n", req->url);
+	struct Stat stat;
 	fd = open(req->url, O_RDONLY);
+	if(fstat(fd, &stat) != 0)
+		goto end;
+
+	//File does not exist
 	if (fd < 0)
 		send_error(req, 404);
-		
+	cprintf("file name is %s \n", stat.st_name);
+
+	//File is a directory
+	if(stat.st_isdir)
+		send_error(req, 404);
+
+	file_size = stat.st_size;
+
 	if ((r = send_header(req, 200)) < 0)
 		goto end;
 
@@ -327,6 +347,7 @@ umain(int argc, char **argv)
 			die("Failed to accept client connection");
 		}
 		handle_client(clientsock);
+		cprintf("exiting");
 	}
 
 	close(serversock);

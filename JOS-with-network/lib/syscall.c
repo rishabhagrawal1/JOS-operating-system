@@ -120,13 +120,13 @@ sys_ipc_recv(void *dstva)
 int
 sys_net_tx(void *buf, size_t len)
 {
-	return syscall(SYS_net_tx, (uint64_t)buf, len, 0, 0, 0, 0);
+	return syscall(SYS_net_tx, 1, (uint64_t)buf, len, 0, 0, 0);
 }
 
 int
-sys_net_rx(void *buf, size_t len)
+sys_net_rx(void *buf)
 {
-	return syscall(SYS_net_rx, (uint64_t)buf, len, 0, 0, 0, 0);
+	return syscall(SYS_net_rx, 0, (uint64_t)buf, 0, 0, 0, 0);
 }
 
 

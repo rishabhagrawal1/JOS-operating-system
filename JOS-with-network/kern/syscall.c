@@ -464,18 +464,22 @@ sys_time_msec(void)
 }
 
 static int
-sys_net_rx(void * buf, size_t size)
+sys_net_rx(void * buf)
 {
-	return 0;
+	int result = 0;
+	user_mem_assert(curenv, (const void *)buf, PGSIZE, PTE_U);
+	result = pci_receive_packet(buf);
+	return result;
 }
 
 static int
 sys_net_tx(void * buf, size_t size)
 {
-	//int i = 0;
-	//for(; i < 10; i++)
-	pci_transmit_packet(buf ,size);
-	return 0;
+	//check for user buffer permissions and address
+	int result = -1;
+	user_mem_assert(curenv, (const void *)buf, size, PTE_U);
+	result = pci_transmit_packet(buf ,size);
+	return result;
 }
 
 // Dispatches to the correct kernel function, passing the arguments.
@@ -535,7 +539,7 @@ syscall(uint64_t syscallno, uint64_t a1, uint64_t a2, uint64_t a3, uint64_t a4, 
 		case SYS_env_set_trapframe:
 			return sys_env_set_trapframe(a1, (struct Trapframe *)a2);
 		case SYS_net_rx:
-			return sys_net_rx((void *)a1, (size_t)a2);
+			return sys_net_rx((void *)a1);
 		case SYS_net_tx:
 			return sys_net_tx((void *)a1, (size_t)a2);
 		case SYS_time_msec:

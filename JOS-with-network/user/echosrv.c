@@ -73,6 +73,7 @@ umain(int argc, char **argv)
 
 	// Run until canceled
 	while (1) {
+		cprintf("HI\n");
 		unsigned int clientlen = sizeof(echoclient);
 		// Wait for client connection
 		if ((clientsock =
@@ -83,6 +84,7 @@ umain(int argc, char **argv)
 		cprintf("Client connected: %s\n", inet_ntoa(echoclient.sin_addr));
 		handle_client(clientsock);
 	}
+	cprintf("BYE\n");
 
 	close(serversock);
 

@@ -27,7 +27,10 @@ Device status reg is 80080783
 Initialized E1000 device
 ns: 52:54:00:12:34:56 bound to static IP 10.0.2.15
 NS: TCP/IP initialized.
-Waiting for http connections...
+opened socket
+trying to bind
+bound
+HI
 No runnable environments in the system!
 Welcome to the JOS kernel monitor!
 Type 'help' for a list of commands.

@@ -29,7 +29,8 @@ struct pci_driver pci_attach_class[] = {
 
 // pci_attach_vendor matches the vendor ID and device ID of a PCI device
 struct pci_driver pci_attach_vendor[] = {
-	{ 0x8086, 0x100e, &pci_func_attach_E1000 },
+	{ 0x8086, 0x100E, &pci_func_attach_E1000 },
+	{ 0x8086, 0x1015, &pci_func_attach_E1000 },
 	{ 0, 0, 0 },
 };
 

@@ -29,8 +29,11 @@
 #define E1000_TARC1    0x03940  /* TX Arbitration Count (1) */
 #define E1000_TXD_BUFFER_LENGTH 0x5EE
 #define E1000_RXD_BUFFER_LENGTH 0x5EE
+#define NUM_TX_DESC 64
+#define NUM_RX_DESC 64
 
 int pci_transmit_packet(const void * src,size_t n);
+int pci_receive_packet(void * dst);
 
 
 struct tx_desc
@@ -44,5 +47,14 @@ struct tx_desc
 	uint16_t special;
 };
 
+struct rx_desc
+{
+	uint64_t addr;
+	uint16_t length;
+	uint16_t chcksum;
+	uint8_t status;
+	uint8_t errors;
+	uint16_t special;
+};
 
 #endif	// JOS_KERN_E1000_H

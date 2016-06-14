@@ -77,6 +77,8 @@ static int
 send_data(struct http_request *req, int fd)
 {
 	// LAB 6: Your code here.
+	
+	return 0;
 	panic("send_data not implemented");
 }
 
@@ -223,8 +225,12 @@ send_file(struct http_request *req)
 	// set file_size to the size of the file
 
 	// LAB 6: Your code here.
-	panic("send_file not implemented");
-
+	//panic("send_file not implemented");
+	cprintf("url %s",req->url );
+	fd = open(req->url, O_RDONLY);
+	if (fd < 0)
+		send_error(req, 404);
+		
 	if ((r = send_header(req, 200)) < 0)
 		goto end;
 

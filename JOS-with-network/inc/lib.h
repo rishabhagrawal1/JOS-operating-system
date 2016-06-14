@@ -60,7 +60,7 @@ int	sys_page_unmap(envid_t env, void *pg);
 int	sys_ipc_try_send(envid_t to_env, uint64_t value, void *pg, int perm);
 int	sys_ipc_recv(void *rcv_pg);
 int sys_net_tx(void *buf, size_t len);
-int sys_net_rx(void *buf, size_t len);
+int sys_net_rx(void *buf);
 unsigned int sys_time_msec(void);
 
 // This must be inlined.  Exercise for reader: why?

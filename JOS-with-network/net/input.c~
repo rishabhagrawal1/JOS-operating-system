@@ -21,6 +21,9 @@ input(envid_t ns_envid)
 	//Allocate page for data transfer
 	//cprintf("Addresses %x %x\n", &nsipcbuf.pkt, &nsipcbuf);
 
+	if ((result = sys_page_alloc(0, &nsipcbuf.pkt, PTE_P|PTE_U|PTE_W)) < 0)
+    	panic("sys_page_alloc: %e", result);
+
 	while(1)
 	{		
 		//read a packet from the device driver
